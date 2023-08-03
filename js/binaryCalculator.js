@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (btn === '=') {
             const regex = /\d+/g;
             const found = res.innerText.match(regex);
-            console.log(found);
+            const [num1, num2] = found.map(num => parseInt(num, 2));
+            res.innerText = (num1 + num2).toString(2);
             return;
         }
         res.innerText = res.innerText + btn;
