@@ -8,10 +8,28 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         if (btn === '=') {
-            const regex = /\d+/g;
-            const found = res.innerText.match(regex);
+            const regExpOperands = /\d+/g;
+            const found = res.innerText.match(regExpOperands);
             const [num1, num2] = found.map(num => parseInt(num, 2));
-            res.innerText = (num1 + num2).toString(2);
+            const regExpOperator = /\D/g;
+            const [operator] = res.innerText.match(regExpOperator);
+            let result = 0;
+
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num1 / num2;
+                    break;
+            }
+            res.innerText = result.toString(2);
             return;
         }
         res.innerText = res.innerText + btn;
