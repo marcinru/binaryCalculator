@@ -7,6 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
             res.innerText = '';
             return;
         }
+        if (btn === '=') {
+            const regex = /\d+/g;
+            const found = res.innerText.match(regex);
+            console.log(found);
+            return;
+        }
         res.innerText = res.innerText + btn;
     });
 });
