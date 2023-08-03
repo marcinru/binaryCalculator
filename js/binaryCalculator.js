@@ -1,15 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const res = document.getElementById('res');
 
-    document.getElementById('btn0').addEventListener('click', () => {
-        res.innerText = res.innerText + '0';
-    });
-
-    document.getElementById('btn1').addEventListener('click', () => {
-        res.innerText = res.innerText + '1';
-    });
-
-    document.getElementById('btnClr').addEventListener('click', () => {
-        res.innerText = '';
+    document.getElementById('btns').addEventListener('click', event => {
+        const btn = event.target.innerText;
+        if (btn === 'C') {
+            res.innerText = '';
+            return;
+        }
+        res.innerText = res.innerText + btn;
     });
 });
