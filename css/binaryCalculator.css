@@ -10,24 +10,25 @@ button {
     float: left;
 }
 
-#res {
+.result {
     background-color: lightgray;
     border: 2px solid black;
+    display: block;
     height: 48px;
     font-size: 20px;
 }
 
-#btn0, #btn1 {
+.number-btn {
     background-color: lightgreen;
     color: brown;
 }
 
-#btnClr, #btnEql {
+.control-btn {
     background-color: darkgreen;
     color: white;
 }
 
-#btnSum, #btnSub, #btnMul, #btnDiv {
+.operator-btn {
     background-color: black;
     color: red;
 }
