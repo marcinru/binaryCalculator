@@ -3,11 +3,14 @@ body {
 }
 
 button {
-    width: 25%;
-    height: 36px;
     font-size: 18px;
     margin: 0;
-    float: left;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 36px 36px;
 }
 
 .result {
